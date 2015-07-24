@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config> 
+    <modules>
+        <SmashingMagazine_LogProductUpdate>
+            <version>0.0.1</version>
+        </SmashingMagazine_LogProductUpdate>
+    </modules>
+
+    <!-- Configure our module's behavior in the global scope -->
+    <global>
+
+        <!-- Defining models -->
+        <models>
+
+            <!--
+                Unique identifier in the model's node.
+                By convention, we put the module's name in lowercase.
+            -->
+            <canagaoglu_logproductupdate>
+
+                <!--
+                    The path to our models directory, with directory
+                    separators replaced by underscores
+                -->
+                <class>CanAgaoglu_LogProductUpdate_Model</class>
+
+            </canagaoglu_logproductupdate>
+
+        </models>
+
+        <events>
+            <catalog_product_save_after>
+                <observers>
+                    <canagaoglu_logproductupdate>
+                        <class>canagaoglu_logproductupdate/observer</class>
+                        <method>logUpdate</method>
+                        <type>singleton</type>
+                    </canagaoglu_logproductupdate>
+                </observers>
+            </catalog_product_save_after>
+        </events>
+
+    </global>
+
+</config>
