@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<config> 
+<config>
     <modules>
-        <SmashingMagazine_LogProductUpdate>
+        <CanAgaoglu_LogProductUpdate>
             <version>0.0.1</version>
-        </SmashingMagazine_LogProductUpdate>
+        </CanAgaoglu_LogProductUpdate>
     </modules>
 
     <!-- Configure our module's behavior in the global scope -->
